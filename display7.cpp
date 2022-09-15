@@ -1,46 +1,46 @@
 /**
- * AUTHOR - MANOEL VITOR PAU FERRO
- * DISPLAY 7 SEGMENTOS
- * DATA 20/07/1991
+ * AUTHOR - MANOEL VITOR
+ * DISPLAY 7 SEGMENTS
+ * DATE 20/07/1991
 */
 
 #include "display7.h"
 
 /**
- * Função que ativa ou desativa os pinos.
+ * Function that active or desactive pins.
 */
 Display::Display(bool state)
 {
     switch(state)
     {
         case true:
-            DDRB |= (1<<5); //pino 13 - B
-            DDRB |= (1<<4); //pino 12 - A
-            DDRB |= (1<<3); //pino 11 - F
-            DDRB |= (1<<2); //pino 10 - G
-            DDRB |= (1<<1); //pino 9 -  E
-            DDRB |= (1<<0); //pino 8 -  D
-            DDRD |= (1<<7); //pino 7 -  C
-            DDRD |= (1<<6); //pino 6 - DOT
+            DDRB |= (1<<5); //pin 13 - B
+            DDRB |= (1<<4); //pin 12 - A
+            DDRB |= (1<<3); //pin 11 - F
+            DDRB |= (1<<2); //pin 10 - G
+            DDRB |= (1<<1); //pin 9 -  E
+            DDRB |= (1<<0); //pin 8 -  D
+            DDRD |= (1<<7); //pin 7 -  C
+            DDRD |= (1<<6); //pin 6 - DOT
         break;
 
         case false:
-            DDRB &= ~(1<<5); //pino 13 - B
-            DDRB &= ~(1<<4); //pino 12 - A
-            DDRB &= ~(1<<3); //pino 11 - F
-            DDRB &= ~(1<<2); //pino 10 - G
-            DDRB &= ~(1<<1); //pino 9 -  E
-            DDRB &= ~(1<<0); //pino 8 -  D
-            DDRD &= ~(1<<7); //pino 7 -  C
-            DDRD &= ~(1<<6); //pino 6 - DOT
+            DDRB &= ~(1<<5); //pin 13 - B
+            DDRB &= ~(1<<4); //pin 12 - A
+            DDRB &= ~(1<<3); //pin 11 - F
+            DDRB &= ~(1<<2); //pin 10 - G
+            DDRB &= ~(1<<1); //pin 9 -  E
+            DDRB &= ~(1<<0); //pin 8 -  D
+            DDRD &= ~(1<<7); //pin 7 -  C
+            DDRD &= ~(1<<6); //pin 6 - DOT
         break;
     }
 }
 
 /**
- * função que exibe um valor número, 
- * de acordo com o valor em inteiro, 
- * fornecido ao parametro da função
+ * function that displays a number value,
+ * according to the integer value,
+ * given to the function parameter
 */
 void Display::numeros(int valor)
 {
@@ -159,8 +159,8 @@ void Display::numeros(int valor)
 }
 
 /**
- * Função que exibe as letras de A a F,
- * passando com parametro o caracter do tipo char 
+ * function that present the letters of A at F,
+ * passing with parameter the character of type char.
 */
 void Display::letras(char letra)
 {
@@ -241,12 +241,11 @@ void Display::letras(char letra)
 }
 
 /**
- * Função que retorna a letra, de acordo com o valor,
- * fornecido em interio ao parametro da função,
+ * function that return the letter, according with value,
+ * passing in integer at parameter of function.
  * 
- * Obs: só retorna alguma letra, se o valor for entre,
- * 10 a 15.
- * As letras são de A a F.
+ * Obs: Only will return some letter, if the value in between 10 at 15.
+ * The letter is A at F.
 */
 char Display::letrasPosicao(int valor)
 {
