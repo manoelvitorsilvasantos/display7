@@ -1,5 +1,5 @@
 /**
- * AUTHOR - MANOEL VITOR PAU FERRO
+ * AUTHOR - MANOEL VITOR
  * DISPLAY 7 SEGMENTOS
  * DATA 20/07/1991
 */
@@ -11,10 +11,10 @@
 class Display
 {
     public:
-        Display(bool state); //função que ativa ou desativa os pinos.
-        void numeros(int valor); //função que mostra os números
-        void letras(char letra); //função que mostra letras de A à F
-        char letrasPosicao(int valor); //função que retorna a letra de acordo com o valor fornecido.
+        Display(bool state); //function that turn on or turn off pins.
+        void numeros(int valor); //fuction that present values.
+        void letras(char letra); //function that present letters in between A at F.
+        char letrasPosicao(int valor); //function that return a character, do you must passing to parameter the value of index.
 };
 
 #endif
